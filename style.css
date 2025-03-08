@@ -61,7 +61,7 @@ div#game:focus{
 }
 
 #words{
-    /* filter: blur(0);  */
+    filter: blur(5px); 
     color: var(--thirdtext);
 }
 
@@ -69,7 +69,7 @@ div#game:focus{
     filter: blur(0);
 }
 
-/* #focus-error {
+#focus-error {
     position: absolute;
     inset: 0;
     text-align: center;
@@ -77,7 +77,7 @@ div#game:focus{
 }
 #game:focus #focus-error{
     display:none;
-} */
+}
 
 div.word{
     display: inline-block;
@@ -120,3 +120,16 @@ div.word{
 #game:focus #cursor{
     display: block;
 }   
+
+#game.over #words{
+    opacity: .5;
+    filter: blur(0);
+
+}
+#game.over:focus #cursor{
+    display: none;
+}   
+
+#game.over #focus-error{
+    display: none;
+}
